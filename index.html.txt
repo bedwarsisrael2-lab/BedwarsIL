@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>קהילת הבדוורס הישראלית</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-right">
+    <h1>קהילת הבדוורס הישראלית</h1>
+    <img src="logo.png" alt="Bedwars Logo">
+  </div>
+</header>
+
+<main>
+  <section class="cards">
+    <div class="card reveal">
+      <h2>שרת דיסקורד</h2>
+      <a href="https://discord.gg/3szzfVvCBm" target="_blank" class="btn">הצטרפות</a>
+    </div>
+
+    <div class="card reveal">
+      <h2>ערוץ יוטיוב</h2>
+      <a href="https://youtube.com/@BedwarsIL3" target="_blank" class="btn">צפייה</a>
+    </div>
+  </section>
+</main>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
